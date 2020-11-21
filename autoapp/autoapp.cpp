@@ -103,6 +103,8 @@ int main(int argc, char* argv[])
         const auto cursor = qApplication.overrideCursor()->shape() == Qt::BlankCursor ? Qt::ArrowCursor : Qt::BlankCursor;
         qApplication.setOverrideCursor(cursor);
     });
+    
+    mainWindow->showFullScreen();
 
     aasdk::usb::USBWrapper usbWrapper(usbContext);
     aasdk::usb::AccessoryModeQueryFactory queryFactory(usbWrapper, ioService);
