@@ -17,9 +17,9 @@ Having <a href="https://github.com/openDsh/aasdk">aasdk</a> built and install fi
 ```sudo apt-get update
 sudo apt-get -y install cmake build-essential git
 
-sudo apt-get install libboost-all-dev libusb-1.0.0-dev libssl-dev cmake libprotobuf-dev protobuf-c-compiler protobuf-compiler libqt5multimedia5 libqt5multimedia5-plugins libqt5multimediawidgets5 qtmultimedia5-dev libqt5bluetooth5 libqt5bluetooth5-bin qtconnectivity5-dev pulseaudio librtaudio-dev
+sudo apt-get install libboost-all-dev libusb-1.0.0-dev libssl-dev cmake libprotobuf-dev protobuf-c-compiler protobuf-compiler libqt5multimedia5 libqt5multimedia5-plugins libqt5multimediawidgets5 qtmultimedia5-dev libqt5bluetooth5 libqt5bluetooth5-bin qtconnectivity5-dev pulseaudio librtaudio-dev qttools5-dev-tools qtmultimedia5-dev qtconnectivity5-dev qtdeclarative5-dev librtaudio-dev
 
-git clone https://github.com/OpenDsh/openauto
+git clone https://github.com/Cacaonut/openauto
 
 mkdir openauto_build; cd openauto_build
 
