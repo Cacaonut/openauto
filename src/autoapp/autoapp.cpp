@@ -85,18 +85,18 @@ int main(int argc, char* argv[])
 
     QApplication qApplication(argc, argv);
     autoapp::ui::MainWindow mainWindow;
-    mainWindow.setWindowFlags(Qt::WindowStaysOnTopHint);
+    #mainWindow.setWindowFlags(Qt::WindowStaysOnTopHint);
 
     auto configuration = std::make_shared<autoapp::configuration::Configuration>();
     autoapp::ui::SettingsWindow settingsWindow(configuration);
-    settingsWindow.setWindowFlags(Qt::WindowStaysOnTopHint);
+    #settingsWindow.setWindowFlags(Qt::WindowStaysOnTopHint);
 
     autoapp::configuration::RecentAddressesList recentAddressesList(7);
     recentAddressesList.read();
 
     aasdk::tcp::TCPWrapper tcpWrapper;
     autoapp::ui::ConnectDialog connectDialog(ioService, tcpWrapper, recentAddressesList);
-    connectDialog.setWindowFlags(Qt::WindowStaysOnTopHint);
+    #connectDialog.setWindowFlags(Qt::WindowStaysOnTopHint);
 
     QObject::connect(&mainWindow, &autoapp::ui::MainWindow::exit, []() { std::exit(0); });
     QObject::connect(&mainWindow, &autoapp::ui::MainWindow::openSettings, &settingsWindow, &autoapp::ui::SettingsWindow::showFullScreen);
@@ -108,7 +108,7 @@ int main(int argc, char* argv[])
         qApplication.setOverrideCursor(cursor);
     });
 
-    mainWindow.showFullScreen();
+    #mainWindow.showFullScreen();
 
     aasdk::usb::USBWrapper usbWrapper(usbContext);
     aasdk::usb::AccessoryModeQueryFactory queryFactory(usbWrapper, ioService);
