@@ -204,7 +204,7 @@ bool InputDevice::handleTouchEvent(QEvent* event)
     if(event->type() == QEvent::MouseButtonRelease || mouse->buttons().testFlag(Qt::LeftButton))
     {
         const uint32_t x = (static_cast<float>(mouse->pos().x()) / 720) * displayGeometry_.width();
-        const uint32_t y = ((static_cast<float>(mouse->pos().y()) / 435) - 45) * displayGeometry_.height();
+        const uint32_t y = (static_cast<float>(mouse->pos().y()) / 435) * displayGeometry_.height() - 75;
         eventHandler_->onTouchEvent({type, x, y, 0});
     }
 
