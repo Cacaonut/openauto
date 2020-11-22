@@ -80,6 +80,7 @@ void QtVideoOutput::onStartPlayback()
         videoWidget_->setAspectRatioMode(Qt::IgnoreAspectRatio);
         videoWidget_->setFocus();
         videoWidget_->resize(720, 435);
+        videoWidget_->move(0, 75);
         videoWidget_->showMinimized();
     }
     else
